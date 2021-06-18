@@ -20,8 +20,14 @@ class NetworkModule {
     fun provideOkHttpClient(): OkHttpClient {
         val hostname = "apodapi.herokuapp.com"
         val certificatePinner = CertificatePinner.Builder()
-            .add(hostname, "sha256/85ed136ec975fad4a044d6427df6434563566c0f936f3cd69941ed8361c73ce2")
-            .add(hostname, "sha256/P0nCq/J8emnMv4JDIhUv6pOJA/kN9BSEuRRbuBa6q8E=")
+            .add(
+                hostname,
+                "sha256/85ed136ec975fad4a044d6427df6434563566c0f936f3cd69941ed8361c73ce2"
+            )
+            .add(
+                hostname,
+                "sha256/P0nCq/J8emnMv4JDIhUv6pOJA/kN9BSEuRRbuBa6q8E="
+            )
             .build()
 
         return OkHttpClient.Builder()

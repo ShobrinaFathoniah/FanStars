@@ -9,7 +9,6 @@
         android:id="@+id/rv_tourism"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/black"
         tools:listitem="@layout/item_list_stars" />
 
     <ImageView
@@ -20,7 +19,6 @@
         android:contentDescription="@string/no_data"
         android:src="@drawable/empty_data"
         android:visibility="gone"
-        android:background="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
