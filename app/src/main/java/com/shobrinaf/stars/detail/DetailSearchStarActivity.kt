@@ -3,7 +3,6 @@ package com.shobrinaf.stars.detail
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
-import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
 import com.shobrinaf.stars.core.domain.model.Stars
@@ -18,8 +17,6 @@ class DetailSearchStarActivity : AppCompatActivity() {
     }
 
     private lateinit var binding: ActivityDetailSearchStarBinding
-
-    private val detailStarViewModel: DetailStarViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
