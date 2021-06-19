@@ -5,8 +5,8 @@ import android.os.Bundle
 import android.view.View
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
-import androidx.recyclerview.widget.LinearLayoutManager
-import com.shobrinaf.stars.core.ui.StarAdapter
+import androidx.recyclerview.widget.StaggeredGridLayoutManager
+import com.shobrinaf.stars.core.ui.FavoriteStarAdapter
 import com.shobrinaf.stars.detail.DetailStarActivity
 import com.shobrinaf.stars.di.FavoriteModuleDependencies
 import com.shobrinaf.stars.favorite.databinding.ActivityFavoriteBinding
@@ -39,9 +39,9 @@ class FavoriteActivity : AppCompatActivity() {
         binding = ActivityFavoriteBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        supportActionBar?.title = "Favorite Stars News"
+        supportActionBar?.title = "Favorite Stars Picture"
 
-        val starAdapter = StarAdapter()
+        val starAdapter = FavoriteStarAdapter()
 
         starAdapter.onItemClick = { selectedData ->
             val intent = Intent(this, DetailStarActivity::class.java)
@@ -52,7 +52,7 @@ class FavoriteActivity : AppCompatActivity() {
         getFavoriteData(starAdapter)
     }
 
-    private fun getFavoriteData(starAdapter: StarAdapter) {
+    private fun getFavoriteData(starAdapter: FavoriteStarAdapter) {
         favoriteViewModel.favorite.observe(this) { stars ->
             if (stars != null) {
                 if (stars.isEmpty()) {
@@ -65,7 +65,7 @@ class FavoriteActivity : AppCompatActivity() {
                 }
 
                 with(binding.rvTourism) {
-                    layoutManager = LinearLayoutManager(context)
+                    layoutManager = StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL)
                     setHasFixedSize(true)
                     adapter = starAdapter
                 }

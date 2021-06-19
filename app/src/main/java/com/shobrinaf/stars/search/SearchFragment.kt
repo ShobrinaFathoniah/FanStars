@@ -81,8 +81,8 @@ class SearchFragment : Fragment() {
         })
 
         with(binding.rvStar.rvStarsStaggered) {
-            layoutManager = StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL)
-            setHasFixedSize(true)
+            layoutManager = StaggeredGridLayoutManager(1, StaggeredGridLayoutManager.VERTICAL)
+
             adapter = starAdapter
         }
     }

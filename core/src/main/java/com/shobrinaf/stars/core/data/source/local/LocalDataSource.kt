@@ -26,5 +26,4 @@ class LocalDataSource @Inject constructor(private val starDao: StarDao) {
         starDao.getSearchStars(search)
 
     suspend fun insertSearchStar(stars: List<SearchStarEntity>) = starDao.insertSearchStar(stars)
-
 }

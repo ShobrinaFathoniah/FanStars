@@ -5,7 +5,7 @@ import retrofit2.http.GET
 import retrofit2.http.Query
 
 interface ApiService {
-    @GET("api/?start_date=2021-04-01&end_date=2021-06-04")
+    @GET("api/?start_date=2021-04-01&end_date=2021-06-07")
     suspend fun getList(): List<StarResponse>
 
     @GET("search/")

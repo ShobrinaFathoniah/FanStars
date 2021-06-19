@@ -9,7 +9,6 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.shobrinaf.stars.R
 import com.shobrinaf.stars.core.data.Resource
 import com.shobrinaf.stars.core.ui.StarAdapter
 import com.shobrinaf.stars.databinding.FragmentHomeBinding
@@ -49,8 +48,6 @@ class HomeFragment : Fragment() {
     }
 
     private fun getDataAPOD(starAdapter: StarAdapter) {
-        binding.txtAPOD2021.text = getString(R.string.apod_2021)
-
         homeViewModel.stars.observe(viewLifecycleOwner, { stars ->
             when (stars) {
                 is Resource.Loading -> {
@@ -93,7 +90,7 @@ class HomeFragment : Fragment() {
         })
 
         with(binding.rvStar.rvStars) {
-            layoutManager = LinearLayoutManager(context)
+            layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
             setHasFixedSize(true)
             adapter = starAdapter
         }
