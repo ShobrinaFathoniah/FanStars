@@ -97,7 +97,7 @@ class HomeFragment : Fragment() {
     }
 
     private fun loading(state: Boolean) {
-        if (state == true) {
+        if (state) {
             binding.progressBar.visibility = View.VISIBLE
         } else {
             binding.progressBar.visibility = View.GONE
