@@ -65,7 +65,8 @@ class FavoriteActivity : AppCompatActivity() {
                 }
 
                 with(binding.rvTourism) {
-                    layoutManager = StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL)
+                    layoutManager =
+                        StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL)
                     setHasFixedSize(true)
                     adapter = starAdapter
                 }
