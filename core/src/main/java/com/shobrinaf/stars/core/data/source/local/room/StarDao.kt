@@ -26,5 +26,4 @@ interface StarDao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertSearchStar(stars: List<SearchStarEntity>)
-
 }

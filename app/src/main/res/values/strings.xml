@@ -18,4 +18,5 @@
     <string name="apod_today">APOD Today</string>
     <string name="search">Search</string>
     <string name="search_apod">Search APOD</string>
+    <string name="title_search">Search Astronomy Picture</string>
 </resources>

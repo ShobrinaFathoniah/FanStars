@@ -8,7 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.shobrinaf.stars.core.ui.FavoriteStarAdapter
 import com.shobrinaf.stars.detail.DetailStarActivity
-import com.shobrinaf.stars.di.FavoriteModuleDependencies
+import com.shobrinaf.stars.di.ModuleDependencies
 import com.shobrinaf.stars.favorite.databinding.ActivityFavoriteBinding
 import dagger.hilt.android.EntryPointAccessors
 import javax.inject.Inject
@@ -30,7 +30,7 @@ class FavoriteActivity : AppCompatActivity() {
             .appDependencies(
                 EntryPointAccessors.fromApplication(
                     applicationContext,
-                    FavoriteModuleDependencies::class.java
+                    ModuleDependencies::class.java
                 )
             )
             .build()

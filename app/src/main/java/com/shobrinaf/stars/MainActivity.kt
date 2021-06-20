@@ -12,7 +12,6 @@ import androidx.fragment.app.Fragment
 import com.google.android.material.navigation.NavigationView
 import com.shobrinaf.stars.databinding.ActivityMainBinding
 import com.shobrinaf.stars.home.HomeFragment
-import com.shobrinaf.stars.search.SearchFragment
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -56,8 +55,8 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 title = getString(R.string.app_name)
             }
             R.id.nav_search -> {
-                fragment = SearchFragment()
-                title = getString(R.string.search_apod)
+                val uri = Uri.parse("stars://search")
+                startActivity(Intent(Intent.ACTION_VIEW, uri))
             }
             R.id.nav_favorite -> {
                 val uri = Uri.parse("stars://favorite")
