@@ -6,12 +6,8 @@ import androidx.lifecycle.asLiveData
 import com.shobrinaf.stars.core.data.Resource
 import com.shobrinaf.stars.core.domain.model.Stars
 import com.shobrinaf.stars.core.domain.usecase.StarUseCase
-import dagger.hilt.android.lifecycle.HiltViewModel
-import javax.inject.Inject
 
-@HiltViewModel
-class SearchViewModel @Inject constructor(val starUseCase: StarUseCase) : ViewModel() {
+class SearchViewModel(val starUseCase: StarUseCase) : ViewModel() {
     fun search(query: String): LiveData<Resource<List<Stars>>> =
         starUseCase.getSearch(query).asLiveData()
 }
-
