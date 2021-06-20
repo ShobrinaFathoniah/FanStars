@@ -45,6 +45,12 @@ class DetailSearchStarActivity : AppCompatActivity() {
             Glide.with(this)
                 .load(detailStar.url)
                 .into(binding.ivDetailImage)
+
+            binding.ivDetailImage.setOnClickListener {
+                val intent = Intent(this, FullImageActivity::class.java)
+                intent.putExtra(FullImageActivity.EXTRA_DATA, detailStar)
+                startActivity(intent)
+            }
         }
     }
 }

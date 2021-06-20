@@ -12,5 +12,6 @@ data class Stars(
     val description: String,
     val title: String,
     val url: String,
+    val hdurl: String,
     val isFavorite: Boolean
 ) : Parcelable

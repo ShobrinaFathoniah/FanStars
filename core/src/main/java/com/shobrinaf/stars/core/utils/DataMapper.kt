@@ -17,6 +17,7 @@ object DataMapper {
                 it.mediaType ?: "",
                 it.description ?: "",
                 it.title ?: "",
+                it.hdurl ?: "",
                 it.url ?: "",
                 isFavorite = false
             )
@@ -35,6 +36,7 @@ object DataMapper {
                 it.description ?: "",
                 it.title ?: "",
                 it.url ?: "",
+                it.hdurl ?: "",
                 isFavorite = it.isFavorite
             )
         }
@@ -46,6 +48,7 @@ object DataMapper {
         input.mediaType ?: "",
         input.description ?: "",
         input.title ?: "",
+        input.hdurl ?: "",
         input.url ?: "",
         isFavorite = input.isFavorite
     )
@@ -61,6 +64,7 @@ object DataMapper {
                 it.mediaType ?: "",
                 it.description ?: "",
                 it.title ?: "",
+                it.hdurl ?: "",
                 it.url ?: ""
             )
             starList.add(star)
@@ -78,6 +82,7 @@ object DataMapper {
                 it.description ?: "",
                 it.title ?: "",
                 it.url ?: "",
+                it.hdurl ?: "",
                 false
             )
         }

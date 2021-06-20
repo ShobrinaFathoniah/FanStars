@@ -28,6 +28,9 @@ data class StarEntity(
     @ColumnInfo(name = "title")
     var title: String,
 
+    @ColumnInfo(name = "hdurl")
+    var hdurl: String,
+
     @ColumnInfo(name = "url")
     var url: String,
 

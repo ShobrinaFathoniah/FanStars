@@ -58,6 +58,12 @@ class DetailStarActivity : AppCompatActivity() {
                 detailStarViewModel.setFavoriteStar(detailStar, statusFavorite)
                 setStatusFavorite(statusFavorite)
             }
+
+            binding.ivDetailImage.setOnClickListener {
+                val intent = Intent(this, FullImageActivity::class.java)
+                intent.putExtra(FullImageActivity.EXTRA_DATA, detailStar)
+                startActivity(intent)
+            }
         }
     }
 

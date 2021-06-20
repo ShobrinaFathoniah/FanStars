@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/black"
-    tools:context=".SearchActivity">
+    tools:context=".SearchActivity"
+    tools:ignore="Overdraw">
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/inputQuery"
@@ -80,6 +81,7 @@
         android:layout_centerInParent="true"
         android:contentDescription="@string/something_wrong"
         android:src="@drawable/error"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

@@ -22,6 +22,9 @@ data class StarResponse(
     @field:SerializedName("title")
     val title: String,
 
+    @field:SerializedName("hdurl")
+    val hdurl: String,
+
     @field:SerializedName("url")
     val url: String
 )
