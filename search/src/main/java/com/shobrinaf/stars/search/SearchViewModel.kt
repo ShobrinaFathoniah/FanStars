@@ -7,7 +7,7 @@ import com.shobrinaf.stars.core.data.Resource
 import com.shobrinaf.stars.core.domain.model.Stars
 import com.shobrinaf.stars.core.domain.usecase.StarUseCase
 
-class SearchViewModel(val starUseCase: StarUseCase) : ViewModel() {
+class SearchViewModel(private val starUseCase: StarUseCase) : ViewModel() {
     fun search(query: String): LiveData<Resource<List<Stars>>> =
         starUseCase.getSearch(query).asLiveData()
 }
