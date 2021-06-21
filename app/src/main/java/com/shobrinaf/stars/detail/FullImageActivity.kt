@@ -30,8 +30,8 @@ class FullImageActivity : AppCompatActivity() {
             Toast.LENGTH_SHORT
         ).show()
 
-        stars?.let{
-            with(binding){
+        stars?.let {
+            with(binding) {
                 Glide.with(this@FullImageActivity)
                     .load(stars.hdurl)
                     .into(fullImage)

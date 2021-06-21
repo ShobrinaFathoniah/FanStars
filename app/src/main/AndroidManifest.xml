@@ -12,9 +12,10 @@
         android:roundIcon="@mipmap/ic_logo_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Stars">
-        <activity android:name=".detail.FullImageActivity"
+        <activity
+            android:name=".detail.FullImageActivity"
             android:label="@string/title_activity_full_image"
-            android:theme="@style/Theme.Stars.NoActionBar"/>
+            android:theme="@style/Theme.Stars.NoActionBar" />
         <activity
             android:name=".MainActivity"
             android:theme="@style/Theme.Stars.NoActionBar">

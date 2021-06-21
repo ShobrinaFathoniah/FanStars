@@ -14,16 +14,15 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" >
+        app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
             android:id="@+id/full_image"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:adjustViewBounds="true"
             android:contentDescription="@string/apod_2021"
-            android:src="@color/primaryDarkColor"
-            android:layout_gravity="center"
-            />
+            android:src="@color/primaryDarkColor" />
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
