@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="blue_200">#8FA0F4</color>
     <color name="blue_500">#1E6FE9</color>
     <color name="blue_700">#1834C2</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
-    <color name="primaryColor">#134266</color>
     <color name="primaryLightColor">#476d94</color>
     <color name="primaryDarkColor">#001c3b</color>
 </resources>
